@@ -1,9 +1,12 @@
 package com.covid.vaccination.center.booking.command;
 
 import com.covid.vaccination.center.booking.entity.User;
+import com.covid.vaccination.center.booking.service.UserService;
 
 public class AddUserCommand implements ICommand {
 
+
+    UserService userService = new UserService();
 
     @Override
     public <T> T create(String[] input) {
@@ -11,7 +14,7 @@ public class AddUserCommand implements ICommand {
     }
 
     @Override
-    public <T> void execute(T input) {
-
+    public <T> void execute(T user) {
+        userService.addUser((User) user);
     }
 }
