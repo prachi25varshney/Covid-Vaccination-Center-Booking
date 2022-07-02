@@ -1,6 +1,5 @@
 package com.covid.vaccination.center.booking.command;
 
-import com.covid.vaccination.center.booking.command.ICommand;
 import com.covid.vaccination.center.booking.entity.BookingList;
 
 public class ListAllBookingsCommand implements ICommand {
@@ -10,7 +9,7 @@ public class ListAllBookingsCommand implements ICommand {
     }
 
     @Override
-    public void execute(String[] input) {
+    public <T> void execute(T input) {
 
     }
 }

@@ -15,6 +15,7 @@ public class CovidVaccinationCenterBooking {
 
         ICommand command = Command.valueOf(inputArray[0]).getCommand();
 
-        command.execute(inputArray);
+        Object entity = command.create(inputArray);
+        command.execute(entity);
     }
 }

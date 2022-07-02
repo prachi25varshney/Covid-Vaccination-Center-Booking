@@ -11,7 +11,7 @@ public class AddUserCommand implements ICommand {
     }
 
     @Override
-    public void execute(String[] input) {
+    public <T> void execute(T input) {
 
     }
 }

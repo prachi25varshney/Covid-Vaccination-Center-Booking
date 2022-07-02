@@ -9,7 +9,7 @@ public class BookVaccinationCommand implements ICommand {
     }
 
     @Override
-    public void execute(String[] input) {
+    public <T> void execute(T input) {
 
     }
 }

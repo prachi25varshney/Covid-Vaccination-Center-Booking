@@ -9,7 +9,7 @@ public class CancelBookingCommand implements ICommand {
     }
 
     @Override
-    public void execute(String[] input) {
+    public <T> void execute(T input) {
 
     }
 }
