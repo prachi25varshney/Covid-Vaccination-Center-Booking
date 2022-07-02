@@ -5,7 +5,7 @@ import com.covid.vaccination.center.booking.entity.BookingList;
 public class ListAllBookingsCommand implements ICommand {
     @Override
     public <T> T create(String[] input) {
-        return (T) new BookingList();
+        return (T) new BookingList(input[1],input[2]);
     }
 
     @Override
