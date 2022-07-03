@@ -27,13 +27,6 @@ public class AdminService {
         addVaccinationCenterInDistrict(newCenter);
     }
 
-    private void addVaccinationCenterInDistrict(Center center) {
-        String district = center.getDistrictName();
-        if (vaccinationCenterListInDistrict.containsKey(district))
-            vaccinationCenterListInDistrict.put(district, new ArrayList<>());
-        vaccinationCenterListInDistrict.get(district).add(center);
-    }
-
     public void addCapacityToVaccinationCenter(CenterCapacity centerCapacity) {
         String centerId = centerCapacity.getCenterId();
         if (!vaccinationCenters.containsKey(centerId))
@@ -42,5 +35,12 @@ public class AdminService {
         int cap = Integer.parseInt(centerCapacity.getCapacity());
         Capacity capacity = new Capacity(day, cap);
         vaccinationCenters.get(centerId).getCapacityList().add(capacity);
+    }
+
+    private void addVaccinationCenterInDistrict(Center center) {
+        String district = center.getDistrictName();
+        if (vaccinationCenterListInDistrict.containsKey(district))
+            vaccinationCenterListInDistrict.put(district, new ArrayList<>());
+        vaccinationCenterListInDistrict.get(district).add(center);
     }
 }
