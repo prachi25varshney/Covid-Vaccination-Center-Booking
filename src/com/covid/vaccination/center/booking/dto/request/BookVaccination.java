@@ -15,8 +15,8 @@ public class BookVaccination {
         return centerId;
     }
 
-    public String getDay() {
-        return day;
+    public int getDay() {
+        return Integer.parseInt(day);
     }
 
     public String getUserId() {
