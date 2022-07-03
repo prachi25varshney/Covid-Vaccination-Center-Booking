@@ -1,6 +1,6 @@
 package com.covid.vaccination.center.booking.service;
 
-import com.covid.vaccination.center.booking.entity.VaccinationCenter;
+import com.covid.vaccination.center.booking.dto.request.VaccinationCenter;
 import com.covid.vaccination.center.booking.exceptions.VaccinationCenterAlreadyExists;
 
 import java.util.ArrayList;

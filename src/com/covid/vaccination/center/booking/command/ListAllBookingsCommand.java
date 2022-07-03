@@ -1,6 +1,6 @@
 package com.covid.vaccination.center.booking.command;
 
-import com.covid.vaccination.center.booking.entity.BookingList;
+import com.covid.vaccination.center.booking.dto.request.BookingList;
 
 public class ListAllBookingsCommand implements ICommand {
     @Override

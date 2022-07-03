@@ -1,4 +1,4 @@
-package com.covid.vaccination.center.booking.entity;
+package com.covid.vaccination.center.booking.dto.request;
 
 public class BookingList {
     private final String centerId;
