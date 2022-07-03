@@ -9,8 +9,7 @@ public class CovidVaccinationCenterBooking {
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        int lines = Integer.parseInt(scanner.nextLine());
-        for(int i=0;i<lines;i++){
+        while (scanner.hasNextLine()){
             String input = scanner.nextLine();
 
             String[] inputArray = input.split(" ");
