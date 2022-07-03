@@ -9,12 +9,15 @@ public class CovidVaccinationCenterBooking {
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
+        while (scanner.hasNextLine()){
+            String input = scanner.nextLine();
 
-        String[] inputArray = input.split(" ");
+            String[] inputArray = input.split(" ");
 
-        ICommand command = Command.valueOf(inputArray[0]).getCommand();
+            ICommand command = Command.valueOf(inputArray[0]).getCommand();
 
-        command.execute(inputArray);
+            Object entity = command.create(inputArray);
+            command.execute(entity);
+        }
     }
 }
