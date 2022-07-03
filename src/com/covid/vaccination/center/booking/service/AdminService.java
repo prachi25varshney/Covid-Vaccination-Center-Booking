@@ -14,8 +14,9 @@ import java.util.Map;
 
 public class AdminService {
 
-    Map<String, Center> vaccinationCenters = new HashMap<>();
-    Map<String, List<Center>> vaccinationCenterListInDistrict = new HashMap<>();
+    static Map<String, Center> vaccinationCenters = new HashMap<>();
+    static Map<String, List<Center>> vaccinationCenterListInDistrict = new HashMap<>();
+
 
     public void addVaccinationCenter(VaccinationCenter vaccinationCenter) {
         String centerId = vaccinationCenter.getCenterId();
@@ -39,7 +40,7 @@ public class AdminService {
 
     private void addVaccinationCenterInDistrict(Center center) {
         String district = center.getDistrictName();
-        if (vaccinationCenterListInDistrict.containsKey(district))
+        if (!vaccinationCenterListInDistrict.containsKey(district))
             vaccinationCenterListInDistrict.put(district, new ArrayList<>());
         vaccinationCenterListInDistrict.get(district).add(center);
     }
